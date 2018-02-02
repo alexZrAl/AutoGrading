@@ -1,15 +1,15 @@
 import cv2
 import numpy as np
 
-#######   training part    ############### 
+'''#######   training part    ###############''' 
 samples = np.loadtxt('generalsamples.txt',np.float32)
 responses = np.loadtxt('generalresponses.txt',np.float32)
 responses = responses.reshape((responses.size,1))
 
 model = cv2.ml.KNearest_create()
 model.train(samples, cv2.ml.ROW_SAMPLE, responses)
-
-############################# testing part  #########################
+'''
+############################# testing part  #########################'''
 
 im = cv2.imread("WechatIMG452.jpeg")
 im = cv2.resize(im, None,fx = 0.4, fy = 0.4, interpolation = cv2.INTER_LINEAR)
