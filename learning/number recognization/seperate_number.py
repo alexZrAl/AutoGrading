@@ -9,7 +9,7 @@ import cv2
 
 
 if __name__ == '__main__':
-    im = cv2.imread("dPaE8.png")
+    im = cv2.imread("g1.png")
     # im = cv2.resize(im, None,fx = 0.4, fy = 0.4, interpolation = cv2.INTER_LINEAR)
 
 
